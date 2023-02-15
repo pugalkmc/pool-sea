@@ -115,8 +115,9 @@ import re
 import time
 from datetime import datetime, timedelta
 import pytz
-from telegram import Bot
+from telegram.bot import Bot
 from telegram.ext import *
+# from telegram.replykeyboardmarkup import ReplyKeyboardMarkup
 from pymongo import MongoClient
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
