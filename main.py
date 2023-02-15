@@ -115,7 +115,7 @@ import re
 import time
 from datetime import datetime, timedelta
 import pytz
-from telegram import Update, Bot
+from telegram import Bot
 from telegram.ext import *
 from pymongo import MongoClient
 import gspread
