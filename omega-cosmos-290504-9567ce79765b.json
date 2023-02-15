@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "omega-cosmos-290504",
+  "private_key_id": "9567ce79765bd3acc0c8cdf2fd3d1542e02c4484",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCkoiCLmSSFChxd\n7leosORvz1krg6l1rCzYAxxOxqSzUOeAx/wieOEBEJY2L2P9PALv4gauqYgzMgyr\new1Xlb1DlvHst7plu3b6UCRYMfGoc2PAE3Kzw3mK+czfNS/bnpItMJZDuILnmvKQ\nrbqZFjHp8N3B1l9ymHgF1xq9G1bgrN3qHMQr5udUw4cZKPNDz1h9Hc+GKR1D46Nf\nU/dmIPTUZAJSmT55X4GQvP+6EQT27CID2j/XqtFzHwKRHy5mHCdfVLKKqa6L1awa\njXa3JzrIPzfwv/gjpNLwnsYYJEFDDAn0hl1/JGKgrrxH7NecAwVFNrcDj7gxOHvK\nAQiuVpc3AgMBAAECggEABMUIfox6LeG/aHGoyxbafDcvvqtKvafpoeJ8YsRHh97R\n4WQp2ysEXcsH7XVaOljcPuxRKqTeI//3TpqHv7nAKRUJvxFwzlS4wc/2yMu9oOM8\niLD0Wd5RoNcG4MQ1aQspi5lrD3acUeIMoZtrtHBO4H4ddpzjpaBimpmDFhp695LB\n1ycWJ0x7k+u6kMfjf0KcWAb1gFNcRHqtZjfdEpn7F59n0BeANsh8l5lrlobfoBsF\nzPG7FE0GfMJN++tMvJdqZNIP7wRl+P7rCSwxe5Wb9bdGH1bF8y5kW2MeAnkx5wa4\noRBVYoN/amz68jfBQCkQIr7m0o5atIAVsPIttUvutQKBgQDVdwch3lz4g6o7U8A6\nmjnRZBcVbb1kQZ+aDlrThMBKjG/u5/pXjzB3EQHE4/BHZJ3SuadO6YNdj54YgOEW\n60vzWJgF4J5oCBThYVWxndkgJQBE9PhMw8ki1L4YrbxWVrzb9SlEHbG/De3Rdbba\nPZR9z8vKzV39JSMPRGiN75eBbQKBgQDFcCsm4d91SAfZ1tlAr1cZ710brFxFryas\na26Clsvh0RMtFpta7/fDsEgZ2dPQP4cgObf5TIU25OS1gP0jE4OAPYYkbBX0jYeK\nCKRJULUbhi+IdAxP+t2SBJG1W7xkL33PQVBIqKq5UWp7bPRAVh/bXJO9YLWBHgRv\nxGBJ9Cx4swKBgE8uhdDEYQw2GtFC8c1LJCNN01o5iMVFqmRE6uAHICUHDwY5upz8\nGmgwQM2+F4UEB58BCtS0vevYuDYyqEwOH/A2br3PYjMIvGYV6umlucK4tu7dR7WB\n8nwfGhyhZXlJV2jn+dSwhxxtmEfYOGmf6hL5H4kswK6ENgsVvwrXUwXJAoGBAMTU\nYUCfF329dI44QVfaNZRWa9UlzMtvpLdpVr97hAA4xcxCaFiNOMzu1cJnxWErpBN9\nVyqCnZ+vK07DLBkm4AcdzrhKxMyLt97lZJruic7JxGNdhdTKPM/QHE7YCIU8T0kq\nTNZSx/h98RDg+tOUyKeQsHywh+ITwcqG1JOFiDw/AoGAJNToYJOJ1Zx7ZvJdFdwI\nAc/egBieTOWXNgN+JTfl3KuutD0VNfM+6wWey60OztNAhsDtLJA1FrTmk4erePkv\nkBfOQUUbJUbjdDl53WiyWRt06yRdHdVdXlTsAFgcqPzLeW+kl84h+Rz9Sq1zecvN\no1qwJlgEJc0QkwFeejSa26U=\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-account@omega-cosmos-290504.iam.gserviceaccount.com",
+  "client_id": "108135341324538936732",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-account%40omega-cosmos-290504.iam.gserviceaccount.com"
+}
