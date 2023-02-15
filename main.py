@@ -116,7 +116,7 @@ import time
 from datetime import datetime, timedelta
 import pytz
 from telegram import Update, Bot
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import *
 from pymongo import MongoClient
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
