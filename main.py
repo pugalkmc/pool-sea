@@ -115,7 +115,7 @@ import re
 import time
 from datetime import datetime, timedelta
 import pytz
-from telegram.bot import Bot
+from telegram import *
 from telegram.ext import *
 # from telegram.replykeyboardmarkup import ReplyKeyboardMarkup
 from pymongo import MongoClient
