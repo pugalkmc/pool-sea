@@ -1,3 +1,4 @@
+python-telegram-bot
 pytz~=2022.7.1
 gspread~=5.7.2
 telegram~=0.0.1
