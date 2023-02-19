@@ -116,6 +116,7 @@ import time
 from datetime import datetime, timedelta
 import pytz
 from telegram import *
+from telegram.bot import Bot
 from telegram.ext import *
 # from telegram.replykeyboardmarkup import ReplyKeyboardMarkup
 from pymongo import MongoClient
@@ -138,11 +139,11 @@ sheet = client.open("Telegram Bot Data").sheet1
 bot = Bot(token=os.environ.get("5123712096:AAFoWsAeO_sJyrsl0upMa-LUCeHE-k8AWYE"))
 
 
-def start(update: Update, context):
+def start(update, context):
     update.message.reply_text("Hi! I'm your Telegram bot. I'll collect messages and links from this group.")
 
 
-def collect_message(update: Update, context):
+def collect_message(update , context):
     message = update.message
     username = message.from_user.username
     chat_id = message.chat_id
@@ -168,103 +169,9 @@ def run_bot():
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(MessageHandler(Filters.text, collect_message))
-
-    # Set up a job to run save_to_spreadsheet() every day at 11:59 PM IST
-    job_queue = updater.job_queue
-    job_queue.run_daily(save_to_spreadsheet, time(hour=18, minute=29, second=0), days=(0, 1, 2, 3, 4, 5, 6),
-                        context=None)
-
     updater.start_polling()
     updater.idle()
 
 
 if __name__ == "__main__":
     run_bot()
-
-# import os
-#
-# import telepot
-# import time
-# import csv
-# import pymongo
-# from datetime import datetime, timedelta
-#
-# # Set up MongoDB
-# client = pymongo.MongoClient('mongodb+srv://pugalkmc:pugalkmc@cluster0.ey2yh.mongodb.net/mydb?retryWrites=true&w=majority')
-# db = client['telegram_bot']
-# users_collection = db['users']
-#
-# # Set up Telegram bot
-# bot = telepot.Bot('5123712096:AAFoWsAeO_sJyrsl0upMa-LUCeHE-k8AWYE')
-#
-# # Define list of usernames to send daily queue of work to
-# usernames_to_send = ['pugalkmc', 'pugalkmc']
-# usernam = 'ni'
-# user1 = {'username': usernam}
-# users_collection.insert_one(user1)
-# print('wef')
-#
-#
-# # Define function to handle incoming messages
-# def handle_message(msg):
-#     content_type, chat_type, chat_id = telepot.glance(msg)
-#     if content_type == 'text' and msg['text'].startswith('/add_username'):
-#         # Add new user to list of authorized users
-#         username = msg['text'][len('/add_username '):]
-#         user = {'username': username}
-#         users_collection.insert_one(user)
-#         bot.sendMessage(chat_id, f'Added {username} to list of authorized users.')
-#     elif content_type == 'text' and chat_type == 'group':
-#         # Collect messages and message links from authorized users
-#         user = users_collection.find_one({'username': msg['from']['username']})
-#         if user is not None:
-#             message = {'text': msg['text'], 'link': None, 'user': user['_id']}
-#             if 'entities' in msg:
-#                 for entity in msg['entities']:
-#                     if entity['type'] == 'url':
-#                         message['link'] = msg['text'][entity['offset']:entity['offset'] + entity['length']]
-#             db['messages'].insert_one(message)
-#
-#
-# # Define function to send daily queue of work to authorized users
-# def send_daily_queue():
-#     # Get today's date
-#     today = datetime.now().date()
-#
-#     # Get messages from yesterday from authorized users
-#     yesterday = today - timedelta(days=1)
-#     users = users_collection.find()
-#     messages = []
-#     for user in users:
-#         user_messages = db['messages'].find({'user': user['_id'],
-#                                              'date': {'$gte': datetime.combine(yesterday, datetime.min.time()),
-#                                                       '$lt': datetime.combine(today, datetime.min.time())}})
-#         for message in user_messages:
-#             messages.append({'user': user['username'], 'text': message['text'], 'link': message['link']})
-#
-#     # Write messages to CSV file
-#     filename = f'daily_queue_{yesterday}.csv'
-#     with open(filename, 'w', newline='') as csvfile:
-#         fieldnames = ['User', 'Text', 'Link']
-#         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-#         writer.writeheader()
-#         for message in messages:
-#             writer.writerow({'User': message['user'], 'Text': message['text'], 'Link': message['link']})
-#
-#     # Send CSV file to authorized users
-#     for username in usernames_to_send:
-#         user = users_collection.find_one({'username': username})
-#         if user is not None:
-#             bot.sendDocument(user['_id'], open(filename, 'rb'))
-#
-#     # Delete CSV file
-#     os.remove(filename)
-#
-#
-# # Set up message handler and start bot
-# bot.message_loop(handle_message)
-# while True:
-#     now = datetime.now().time()
-#     if now.hour == 23 and now.minute == 59:
-#         send_daily_queue()
-#     time.sleep(1)
