@@ -3,7 +3,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 # Step 1: Authenticate and access the spreadsheet
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name('omega-cosmos-290504-9567ce79765b.json', scope)
 client = gspread.authorize(creds)
 
 sheet_url = 'https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit#gid=0'
