@@ -6,9 +6,9 @@ scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/au
 creds = ServiceAccountCredentials.from_json_keyfile_name('omega-cosmos-290504-9567ce79765b.json', scope)
 client = gspread.authorize(creds)
 
-sheet_url = 'https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit#gid=0'
-sheet_name = 'Sheet1'
-sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
+#sheet_url = 'https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit#gid=0'
+#sheet_name = 'Sheet1'
+sheet = client.create('My New Sheet')
 
 # Step 2: Get user input and convert usernames to Twitter profile links
 username = input('Enter your username: ')
