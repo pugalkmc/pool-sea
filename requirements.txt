@@ -1,6 +1,2 @@
-python-telegram-bot==13.9
-pytz~=2022.7.1
-gspread~=5.7.2
-telegram~=0.0.1
-pymongo~=4.3.3
-google-api-python-client~=2.77.0
+gspread==4.0.1
+oauth2client==4.1.3
